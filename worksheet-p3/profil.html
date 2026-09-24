@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makanan Favorit Saya</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Makanan Favorit Saya</h1>
+
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li>
+                    <a href="#daftar-makanan">Daftar Makanan</a>
+                </li>
+                <li>
+                    <a href="#tambah-makanan">Tambah Makanan</a>
+                </li>
+                <li>
+                    <a href="#tentang-saya">Tentang Saya</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="daftar-makanan">
+            <h2>Daftar Makanan</h2>
+
+            <p>
+                Berikut adalah beberapa makanan favorit saya,
+                mulai dari yang paling saya sukai hingga makanan
+                favorit lainnya.
+            </p>
+
+            <table>
+                <caption>
+                    Daftar Makanan Favorit Saya
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Nama Makanan</th>
+                        <th scope="col">Asal</th>
+                        <th scope="col">Jenis</th>
+                        <th scope="col">Rating</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Mie Ayam Bakso</th>
+                        <td>Indonesia</td>
+                        <td>Makanan utama</td>
+                        <td>5/5</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Nasi Goreng</th>
+                        <td>Indonesia</td>
+                        <td>Makanan utama</td>
+                        <td>4/5</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Udon</th>
+                        <td>Jepang</td>
+                        <td>Makanan utama</td>
+                        <td>4/5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img
+                    src="makanan-favorit.jpg"
+                    alt="Semangkuk mie ayam bakso dengan bakso, mie, dan pelengkap"
+                    width="500"
+                    height="333"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Mie ayam bakso, makanan yang paling saya sukai.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section id="tambah-makanan">
+            <h2>Tambah Makanan</h2>
+
+            <p>
+                Masukkan makanan favorit yang ingin ditambahkan
+                ke dalam daftar.
+            </p>
+
+            <form>
+
+                <div>
+                    <label for="nama-makanan">
+                        Nama Makanan
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama-makanan"
+                        name="nama-makanan"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="asal-makanan">
+                        Asal
+                    </label>
+
+                    <input
+                        type="text"
+                        id="asal-makanan"
+                        name="asal-makanan"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="rating">
+                        Rating
+                    </label>
+
+                    <input
+                        type="number"
+                        id="rating"
+                        name="rating"
+                        min="1"
+                        max="5"
+                        required
+                    >
+                </div>
+
+                <button type="submit">
+                    Tambah Makanan
+                </button>
+
+            </form>
+
+        </section>
+
+        <section id="tentang-saya">
+            <h2>Tentang Saya</h2>
+
+            <p>
+                Saya membuat halaman ini untuk menampilkan
+                makanan-makanan yang saya sukai. Mie ayam bakso
+                menjadi makanan favorit saya, kemudian nasi goreng
+                dan udon.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Zahra Maziluna Putri Aditia · 25523246 · 2026
+        </p>
+    </footer>
+
+</body>
+
+</html>
