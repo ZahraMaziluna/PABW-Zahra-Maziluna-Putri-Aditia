@@ -1,53 +1,92 @@
-header {
-  padding-block: var(--space-4);
-  border-bottom: 1px solid var(--color-border);
+/* =========================
+   KERANGKA HALAMAN
+   ========================= */
+
+.page {
+    display: grid;
+
+    grid-template-rows:
+        auto
+        1fr
+        auto;
+
+    min-height: 100dvh;
 }
 
-.header-baris {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  flex-wrap: wrap;
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    display: flex;
+
+    gap: var(--space-4);
+
+    align-items: center;
+    justify-content: space-between;
+
+    /* Menyamakan posisi judul dengan isi halaman */
+    padding: 0 var(--space-6);
 }
 
-nav ul {
-  display: flex;
-  gap: var(--space-4);
-  list-style: none;
-  padding: 0;
-  flex-wrap: wrap;
+.navbar__menu {
+    display: flex;
+
+    gap: var(--space-4);
+
+    align-items: center;
 }
 
-nav a {
-  color: var(--color-primary);
-  text-decoration: none;
+
+/* =========================
+   ISI HALAMAN
+   ========================= */
+
+.isi {
+    display: grid;
+
+    grid-template-columns:
+        16rem
+        1fr;
+
+    grid-template-areas:
+        "sisi utama";
+
+    gap: var(--space-6);
+
+    padding: var(--space-6);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--section-gap);
-  padding-block: var(--space-6);
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sisi {
+    grid-area: sisi;
+
+    min-width: 0;
 }
 
-.katalog {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
+
+/* =========================
+   KONTEN UTAMA
+   ========================= */
+
+.utama {
+    grid-area: utama;
+
+    min-width: 0;
 }
 
-.kartu {
-  flex: 1 1 16rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-1);
-  padding: var(--card-pad);
-}
 
-footer {
-  margin-top: var(--space-6);
-  padding-block: var(--space-4);
-  border-top: 1px solid var(--color-border);
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    padding: var(--space-4);
+
+    text-align: center;
 }

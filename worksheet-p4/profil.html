@@ -1,235 +1,205 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>Makanan Favorit Saya</title>
+    <title>Makanan Favorit Saya</title>
 
-<link rel="stylesheet" href="tokens.css">
-<link rel="stylesheet" href="base.css">
-<link rel="stylesheet" href="layout.css">
-<link rel="stylesheet" href="komponen.css">
-<link rel="stylesheet" href="tema.css">
-```
-
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
 </head>
 
 <body>
 
-```
-<header>
-    <div class="header-baris">
+<div class="page">
 
-        <h1>Makanan Favorit Saya</h1>
+    <!-- HEADER -->
+    <header class="navbar">
 
-        <nav aria-label="Navigasi utama">
-            <ul>
-                <li>
-                    <a href="#daftar-makanan">Daftar Makanan</a>
-                </li>
-                <li>
-                    <a href="#tambah-makanan">Tambah Makanan</a>
-                </li>
-                <li>
-                    <a href="#tentang-saya">Tentang Saya</a>
-                </li>
-            </ul>
+        <h1 class="navbar__judul">
+            Makanan Favorit Saya
+        </h1>
+
+        <nav class="navbar__menu">
+            <a href="#">Beranda</a>
+            <a href="#makanan">Makanan</a>
+            <a href="#kontak">Kontak</a>
         </nav>
 
-        <div>
-            <input
-                type="checkbox"
-                id="tema"
-                class="pengalih-tema"
-            >
-
-            <label
-                for="tema"
-                class="tombol-tema"
-            >
-                Tema gelap
-            </label>
-        </div>
-
-    </div>
-</header>
-
-<main>
-
-    <section id="daftar-makanan">
-
-        <h2>Daftar Makanan</h2>
-
-        <p>
-            Berikut adalah beberapa makanan favorit saya,
-            mulai dari yang paling saya sukai hingga makanan
-            favorit lainnya.
-        </p>
-
-        <table>
-            <caption>
-                Daftar Makanan Favorit Saya
-            </caption>
-
-            <thead>
-                <tr>
-                    <th scope="col">Nama Makanan</th>
-                    <th scope="col">Asal</th>
-                    <th scope="col">Jenis</th>
-                    <th scope="col">Rating</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <th scope="row">Mie Ayam Bakso</th>
-                    <td>Indonesia</td>
-                    <td>Makanan utama</td>
-                    <td>5/5</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">Nasi Goreng</th>
-                    <td>Indonesia</td>
-                    <td>Makanan utama</td>
-                    <td>4/5</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">Udon</th>
-                    <td>Jepang</td>
-                    <td>Makanan utama</td>
-                    <td>4/5</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <figure>
-            <img
-                src="makanan-favorit.jpg"
-                alt="Semangkuk mie ayam bakso dengan bakso, mie, dan pelengkap"
-                width="500"
-                height="333"
-                loading="lazy"
-            >
-
-            <figcaption>
-                Mie ayam bakso, makanan yang paling saya sukai.
-            </figcaption>
-        </figure>
-
-    </section>
+    </header>
 
 
-    <section id="tambah-makanan">
+    <!-- ISI HALAMAN -->
+    <main class="isi">
 
-        <h2>Tambah Makanan</h2>
+        <!-- SIDEBAR -->
+        <aside class="sisi">
 
-        <p>
-            Masukkan makanan favorit yang ingin ditambahkan
-            ke dalam daftar.
-        </p>
+            <section class="tentang">
 
-        <form>
+                <h2>Tentang Saya</h2>
 
-            <div class="form-kolom">
-
-                <label for="nama-makanan">
-                    Nama Makanan
-                </label>
-
-                <input
-                    type="text"
-                    id="nama-makanan"
-                    name="nama-makanan"
-                    required
-                >
-
-                <p class="pesan-galat">
-                    Nama makanan wajib diisi.
+                <p>
+                    Saya suka mencoba berbagai macam makanan,
+                    terutama makanan yang memiliki rasa yang unik
+                    dan lezat.
                 </p>
+
+                <p>
+                    Halaman ini berisi beberapa makanan favorit saya.
+                </p>
+
+            </section>
+
+        </aside>
+
+
+        <!-- KONTEN UTAMA -->
+        <section class="utama" id="makanan">
+
+            <h2>Daftar Makanan Favorit</h2>
+
+            <div class="galeri">
+
+                <!-- NASI GORENG -->
+                <article class="kartu">
+
+                    <img
+                        class="kartu__gambar"
+                        src="nasi goreng.jpg"
+                        alt="Nasi Goreng"
+                    >
+
+                    <div class="kartu__isi">
+
+                        <h3 class="kartu__judul">
+                            Nasi Goreng
+                        </h3>
+
+                        <p>
+                            Nasi goreng adalah salah satu makanan
+                            favorit saya karena rasanya gurih dan
+                            cocok dimakan kapan saja.
+                        </p>
+
+                    </div>
+
+                    <div class="kartu__kaki">
+                        <span>Makanan Favorit</span>
+                    </div>
+
+                </article>
+
+
+                <!-- MIE AYAM -->
+                <article class="kartu">
+
+                    <img
+                        class="kartu__gambar"
+                        src="makanan-favorit.jpg"
+                        alt="Mie Ayam"
+                    >
+
+                    <div class="kartu__isi">
+
+                        <h3 class="kartu__judul">
+                            Mie Ayam
+                        </h3>
+
+                        <p>
+                            Mie ayam memiliki perpaduan mie, ayam,
+                            dan kuah yang membuatnya menjadi makanan
+                            yang lezat.
+                        </p>
+
+                    </div>
+
+                    <div class="kartu__kaki">
+                        <span>Makanan Favorit</span>
+                    </div>
+
+                </article>
+
+
+                <!-- AYAM GEPREK -->
+                <article class="kartu">
+
+                    <img
+                        class="kartu__gambar"
+                        src="ayam geprek.jpg"
+                        alt="Ayam Geprek"
+                    >
+
+                    <div class="kartu__isi">
+
+                        <h3 class="kartu__judul">
+                            Ayam Geprek
+                        </h3>
+
+                        <p>
+                            Ayam geprek menjadi favorit karena
+                            memiliki rasa gurih dan pedas.
+                        </p>
+
+                    </div>
+
+                    <div class="kartu__kaki">
+                        <span>Makanan Favorit</span>
+                    </div>
+
+                </article>
 
             </div>
 
-
-            <div class="form-kolom">
-
-                <label for="asal-makanan">
-                    Asal
-                </label>
-
-                <input
-                    type="text"
-                    id="asal-makanan"
-                    name="asal-makanan"
-                    required
-                >
-
-                <p class="pesan-galat">
-                    Asal makanan wajib diisi.
-                </p>
-
-            </div>
+        </section>
 
 
-            <div class="form-kolom">
+        <!-- SOROTAN -->
+        <section class="sorotan">
 
-                <label for="rating">
-                    Rating
-                </label>
+            <h2>Informasi Makanan</h2>
 
-                <input
-                    type="number"
-                    id="rating"
-                    name="rating"
-                    min="1"
-                    max="5"
-                    required
-                >
+            <div class="informasi">
 
-                <p class="pesan-galat">
-                    Rating harus diisi antara 1 sampai 5.
-                </p>
+                <div>
+                    <h3>Makanan Favorit</h3>
+
+                    <p>
+                        Saya menyukai berbagai jenis makanan
+                        dengan rasa yang berbeda-beda.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Rasa yang Disukai</h3>
+
+                    <p>
+                        Gurih, pedas, dan lezat.
+                    </p>
+                </div>
 
             </div>
 
+        </section>
 
-            <button type="submit">
-                Tambah Makanan
-            </button>
-
-        </form>
-
-    </section>
+    </main>
 
 
-    <section id="tentang-saya">
-
-        <h2>Tentang Saya</h2>
+    <!-- FOOTER -->
+    <footer class="footer" id="kontak">
 
         <p>
-            Saya membuat halaman ini untuk menampilkan
-            makanan-makanan yang saya sukai. Mie ayam bakso
-            menjadi makanan favorit saya, kemudian nasi goreng
-            dan udon.
+            &copy; 2026 Makanan Favorit Saya
         </p>
 
-    </section>
+    </footer>
 
-</main>
-
-
-<footer>
-    <p>
-        Zahra Maziluna Putri Aditia · 25523246 · 2026
-    </p>
-</footer>
-```
+</div>
 
 </body>
-
 </html>
