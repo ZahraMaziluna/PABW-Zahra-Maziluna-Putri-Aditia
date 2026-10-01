@@ -1,0 +1,222 @@
+/* =========================
+   KARTU
+   ========================= */
+
+.kartu {
+  min-width: 0;
+  min-height: 14rem;
+
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+
+  padding: var(--card-pad);
+}
+
+.kartu__isi {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.kartu__judul {
+  overflow-wrap: anywhere;
+}
+
+.kartu__kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+
+  margin-top: auto;
+  padding-top: var(--space-3);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.kartu__kaki span {
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.kartu__detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.kartu__detail span {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+.badge {
+  width: fit-content;
+
+  padding: var(--space-1) var(--space-2);
+
+  border-radius: var(--radius-full);
+
+  background: var(--color-primary);
+  color: var(--color-surface);
+
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+
+/* =========================
+   SPAN P5
+   ========================= */
+
+.sorotan {
+  grid-column: span 2;
+}
+
+
+/* =========================
+   GAMBAR
+   ========================= */
+
+.gambar-makanan {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  padding: var(--card-pad);
+  box-shadow: var(--shadow-1);
+}
+
+.gambar-makanan img {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.gambar-makanan figcaption {
+  font-size: var(--text-sm);
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+
+  max-width: 40rem;
+}
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+
+  font: inherit;
+
+  padding: var(--space-2) var(--space-3);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+button {
+  width: fit-content;
+
+  font: inherit;
+
+  padding: var(--space-2) var(--space-4);
+
+  border: 0;
+  border-radius: var(--radius-md);
+
+  background: var(--color-primary);
+  color: var(--color-surface);
+
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+/* =========================
+   FOCUS
+   ========================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+
+/* =========================
+   VALIDASI FORM
+   ========================= */
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: var(--color-danger);
+}
+
+.pesan-galat {
+  display: none;
+
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+
+.form-kolom:has(input:user-invalid) .pesan-galat,
+.form-kolom:has(select:user-invalid) .pesan-galat,
+.form-kolom:has(textarea:user-invalid) .pesan-galat {
+  display: block;
+}
+
+
+/* =========================
+   RESPONSIVE SPAN
+   ========================= */
+
+@media (max-width: 40rem) {
+  .sorotan {
+    grid-column: span 1;
+  }
+}
