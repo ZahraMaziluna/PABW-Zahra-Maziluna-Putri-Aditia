@@ -97,3 +97,50 @@ Contoh penerapan:
 Flexbox digunakan pada navigasi dan komponen kartu untuk mengatur posisi elemen secara fleksibel.
 
 Pertemuan 5 tetap mempertahankan **design token, form, gambar, dan tema gelap** yang telah dibuat pada Pertemuan 4.
+
+## Pertemuan 6 — Responsif Mobile-First
+
+Pada Pertemuan 6, halaman dari Pertemuan 5 dikembangkan agar beradaptasi secara optimal di berbagai ukuran layar menggunakan pendekatan **Mobile-First**, **Meta Viewport**, **satuan relatif (rem)**, dan **Media Query dengan `min-width`**.
+
+Berkas yang digunakan:
+* `profil.html`
+* `tokens.css`
+* `base.css`
+* `layout.css`
+* `komponen.css`
+* `tema.css`
+* `responsif.css` *(berkas baru P06)*
+
+Penerapan Responsif Mobile-First:
+* **Baris Meta Viewport**: Dipasang di bagian `<head>` pada `profil.html` untuk memastikan peramban HP menyesuaikan tampilan dengan lebar perangkat asli (`width=device-width, initial-scale=1.0`).
+* **Gaya Dasar Layar Sempit (Mobile-First)**: Ditulis di `responsif.css` tanpa *media query*, menghasilkan struktur 1 kolom yang rapi pada lebar 360 px tanpa adanya *scroll* mendatar.
+* **Titik Henti 1 (`@media (min-width: 48rem)`)**: Mengubah galeri kartu dari 1 kolom menjadi 2 kolom untuk tampilan layar tablet (768 px).
+* **Titik Henti 2 (`@media (min-width: 60rem)`)**: Menyandingkan sidebar (16rem) di sebelah kiri konten utama dan mengubah galeri kartu menjadi 3 kolom untuk layar desktop (1280 px).
+* **Batas Media & Elemen**: Gambar dibatasi dengan `max-width: 100%; height: auto;` agar tidak meluber, dan tabel diberi wadah bergulir `.table-wrap`.
+
+Contoh penerapan media query pada `responsif.css`:
+
+```css
+/* Gaya dasar mobile-first (layar sempit 360px) */
+.isi {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* Tablet (768px / 48rem) */
+@media (min-width: 48rem) {
+  .galeri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (960px+ / 60rem) */
+@media (min-width: 60rem) {
+  .isi {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+  .galeri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
