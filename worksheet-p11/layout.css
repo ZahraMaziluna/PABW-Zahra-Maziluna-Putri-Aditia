@@ -1,0 +1,147 @@
+.header {
+  background-color: var(--primary-color);
+  color: var(--color-bg);
+  padding: 1.5rem 1rem;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.judul-header {
+  text-align: left;
+}
+
+.judul-header h1 {
+  margin: 0;
+}
+
+.judul-header p {
+  margin: 0.5rem 0 1rem;
+}
+
+.header-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.nav-menu a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+.layout-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  width: min(100% - 2rem, 75rem);
+  margin: 2rem auto;
+  align-items: start;
+}
+
+.sidebar-stack,
+.section-card {
+  min-width: 0;
+}
+
+.section-card {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-1);
+}
+
+.sidebar h2,
+.section-card h2 {
+  margin-top: 0;
+}
+
+.panel-halaman p:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-stack {
+  display: grid;
+  gap: var(--section-gap);
+}
+
+.main-content {
+  display: grid;
+  gap: var(--section-gap);
+  min-width: 0;
+}
+
+#tentang-saya.tentang-saya {
+  width: min(100% - 2rem, 75rem);
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+#tentang-saya.tentang-saya p {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.tips-card {
+  border-left: 4px solid var(--color-primary);
+}
+
+.tips-card h2 {
+  color: var(--color-primary);
+}
+
+.tips-card ul {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.tips-card li + li {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 60rem) {
+  .layout-container {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 42rem) {
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .judul-header p {
+    margin-bottom: 0;
+  }
+
+  .header-tools {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-menu {
+    justify-content: flex-start;
+  }
+}

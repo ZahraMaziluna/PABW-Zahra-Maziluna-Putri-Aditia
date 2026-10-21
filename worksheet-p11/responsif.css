@@ -1,0 +1,33 @@
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 60rem) {
+  .makanan-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 30rem) {
+  .filter-bar {
+    align-items: stretch;
+  }
+
+  .btn-reset {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

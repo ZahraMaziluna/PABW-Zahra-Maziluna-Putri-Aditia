@@ -97,3 +97,21 @@ Contoh penerapan:
 Flexbox digunakan pada navigasi dan komponen kartu untuk mengatur posisi elemen secara fleksibel.
 
 Pertemuan 5 tetap mempertahankan **design token, form, gambar, dan tema gelap** yang telah dibuat pada Pertemuan 4.
+
+## Milestone WS11 — Modul, State, dan Penyimpanan Klien
+
+Folder `worksheet-p11/` melanjutkan halaman Makanan Favorit Saya tanpa mengubah pekerjaan P1. Milestone ini mempertahankan pilihan makanan **Mie Ayam Bakso, Nasi Goreng, dan Udon**, foto lokal masing-masing makanan, filter asal, navigasi, form, serta tombol tema gelap/terang.
+
+### Capaian
+
+- Memisahkan JavaScript menjadi lima modul: `data.js`, `state.js`, `dom.js`, `events.js`, dan `app.js`. `api.js` P10 tetap menjadi modul tambahan untuk memuat `data/makanan.json`.
+- Mengelola kategori aktif dalam satu objek `state` dan menggambar ulang halaman berdasarkan state.
+- Menyimpan preferensi kategori menggunakan JSON dan `localStorage`, dengan nomor versi serta pemulihan saat simpanan rusak atau versinya tidak sesuai.
+- Menyediakan tombol **Atur Ulang** untuk menghapus preferensi kategori yang tersimpan.
+- Mempertahankan tampilan responsif, panel **Tentang Halaman** dan **Tips Makanan** yang terpisah, serta bagian **Tentang Saya** di bagian bawah halaman.
+
+### Pemeriksaan
+
+Modul JavaScript dan data JSON diperiksa. Filter, simpan/pulih preferensi, reset, tema, foto, dan layout desktop/mobile diuji di browser melalui server lokal.
+
+Rincian pembagian modul dan catatan penggunaan AI tersedia di [`worksheet-p11/README.md`](./worksheet-p11/README.md).

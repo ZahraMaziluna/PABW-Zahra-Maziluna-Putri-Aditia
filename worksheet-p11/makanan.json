@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nama": "Nasi Goreng Rendang",
+    "kategori": "Makanan Berat",
+    "harga": 25000,
+    "rating": 4.8,
+    "deskripsi": "Nasi goreng dengan bumbu rempah rendang khas Minang disajikan dengan telor dan kerupuk.",
+    "gambar": "https://via.placeholder.com/300x200?text=Nasi+Goreng"
+  },
+  {
+    "id": 2,
+    "nama": "Sate Ayam Madura",
+    "kategori": "Makanan Berat",
+    "harga": 20000,
+    "rating": 4.7,
+    "deskripsi": "Sate ayam empuk dipanggang dengan bumbu kacang kental dan irisan bawang merah.",
+    "gambar": "https://via.placeholder.com/300x200?text=Sate+Ayam"
+  },
+  {
+    "id": 3,
+    "nama": "Pempek Palembang",
+    "kategori": "Camilan",
+    "harga": 18000,
+    "rating": 4.9,
+    "deskripsi": "Olahan ikan tenggiri disajikan lengkap dengan kuah cuko manis asam pedas.",
+    "gambar": "https://via.placeholder.com/300x200?text=Pempek"
+  },
+  {
+    "id": 4,
+    "nama": "Es Cendol Dawet",
+    "kategori": "Minuman",
+    "harga": 10000,
+    "rating": 4.6,
+    "deskripsi": "Minuman segar dengan cendol beras, santan gurih, dan gula merah cair asli.",
+    "gambar": "https://via.placeholder.com/300x200?text=Es+Cendol"
+  }
+]

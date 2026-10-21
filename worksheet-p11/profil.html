@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makanan Favorit Saya</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+  <link rel="stylesheet" href="responsif.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="judul-header">
+        <h1>Makanan Favorit Saya</h1>
+        <p>Daftar makanan yang paling saya sukai.</p>
+      </div>
+      <div class="header-tools">
+        <nav class="nav-menu">
+          <a href="#daftar-makanan">Daftar Makanan</a>
+          <a href="#tambah-makanan">Tambah Makanan</a>
+          <a href="#tentang-saya">Tentang Saya</a>
+        </nav>
+        <div class="pengaturan-tema">
+          <input type="checkbox" id="tema" class="pengalih-tema">
+          <label for="tema" class="tombol-tema">🌙 Tema gelap</label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout-container">
+    <aside class="sidebar-stack">
+      <section class="section-card panel-halaman">
+        <h2>Tentang Halaman</h2>
+        <p id="deskripsi-halaman">Halaman ini berisi makanan yang saya sukai beserta asal, jenis, dan penilaiannya.</p>
+        <p>Favorit utama <strong id="stat-favorit">-</strong></p>
+        <p>Jumlah makanan <strong id="stat-jumlah">-</strong></p>
+        <p>Rating tertinggi <strong id="stat-rating">-</strong></p>
+      </section>
+      <section id="tips-makanan" class="section-card tips-card">
+        <h2>Tips Makanan</h2>
+        <ul>
+          <li>Pilih makanan yang beragam agar menu harian lebih bervariasi.</li>
+          <li>Perhatikan kebersihan makanan dan tempat makan.</li>
+          <li>Sesuaikan porsi dengan kebutuhan dan jangan lupa minum air putih.</li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="main-content">
+      <section id="daftar-makanan" class="section-card">
+        <h2>Daftar Makanan</h2>
+        <p id="info-kategori" aria-live="polite">Memuat daftar makanan...</p>
+        <div class="filter-bar" aria-label="Filter makanan">
+          <div class="filter-buttons">
+            <button type="button" class="btn-filter active" data-kategori="semua" aria-pressed="true">Semua</button>
+            <button type="button" class="btn-filter" data-kategori="Indonesia" aria-pressed="false">Indonesia</button>
+            <button type="button" class="btn-filter" data-kategori="Jepang" aria-pressed="false">Jepang</button>
+          </div>
+          <button type="button" id="btn-reset" class="btn-reset">Atur Ulang</button>
+        </div>
+        <p id="status-makanan" class="status-msg" role="status" hidden></p>
+        <div id="makanan-list" class="makanan-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="tambah-makanan" class="section-card">
+        <h2>Tambah Makanan</h2>
+        <form id="form-tambah">
+          <div class="form-group">
+            <label for="nama">Nama Makanan</label>
+            <input type="text" id="nama" required>
+          </div>
+          <div class="form-group">
+            <label for="asal">Asal</label>
+            <input type="text" id="asal" required>
+          </div>
+          <div class="form-group">
+            <label for="rating">Rating (1-5)</label>
+            <input type="number" id="rating" min="1" max="5" step="0.1" required>
+          </div>
+          <button type="submit" class="btn-submit">Tambah Makanan</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <section id="tentang-saya" class="section-card tentang-saya">
+    <h2>Tentang Saya</h2>
+    <p id="deskripsi-saya">-</p>
+  </section>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
