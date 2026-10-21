@@ -1,0 +1,85 @@
+/* =========================================================
+   RESPONSIF MOBILE-FIRST — PERTEMUAN 6 (responsif.css)
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. GAYA DASAR (Mobile-First / Berlaku untuk Semua Lebar)
+   --------------------------------------------------------- */
+
+/* Layout utama bertumpuk 1 kolom di layar sempit */
+.isi {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  min-width: 0;
+  padding-block: var(--space-6);
+}
+
+/* Galeri kartu 1 kolom */
+.galeri {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* Kartu sorotan tidak span 2 kolom pada mobile */
+.sorotan {
+  grid-column: span 1;
+}
+
+/* Pembatasan media gambar agar fleksibel */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Pembungkus tabel lebar agar bergulir sendiri */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Teks fleksibel sesuai ukuran font pengguna */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   2. TITIK HENTI 1: TABLET (min-width: 48rem / 768px)
+   --------------------------------------------------------- */
+@media (min-width: 48rem) {
+  /* Galeri beralih dari 1 kolom menjadi 2 kolom */
+  .galeri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Kartu utama/sorotan mengambil 2 kolom */
+  .sorotan {
+    grid-column: span 2;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   3. TITIK HENTI 2: DESKTOP (min-width: 60rem / 960px)
+   --------------------------------------------------------- */
+@media (min-width: 60rem) {
+  /* Sidebar bersanding dengan konten utama */
+  .isi {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+
+  /* Galeri beralih menjadi 3 kolom */
+  .galeri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Kartu sorotan kembali menyesuaikan span jika diperlukan */
+  .sorotan {
+    grid-column: span 3;
+  }
+}

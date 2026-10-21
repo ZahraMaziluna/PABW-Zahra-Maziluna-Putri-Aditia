@@ -109,6 +109,7 @@ Folder `worksheet-p11/` melanjutkan halaman Makanan Favorit Saya tanpa mengubah 
 - Menyimpan preferensi kategori menggunakan JSON dan `localStorage`, dengan nomor versi serta pemulihan saat simpanan rusak atau versinya tidak sesuai.
 - Menyediakan tombol **Atur Ulang** untuk menghapus preferensi kategori yang tersimpan.
 - Mempertahankan tampilan responsif, panel **Tentang Halaman** dan **Tips Makanan** yang terpisah, serta bagian **Tentang Saya** di bagian bawah halaman.
+- Menggunakan font **Poppins** pada halaman WS11.
 
 ### Pemeriksaan
 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daftar makanan favorit Zahra beserta asal, jenis, dan rating.">
+  <title>Makanan Favorit Saya</title>
+
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+  <link rel="stylesheet" href="responsif.css">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-baris">
+        <div class="judul-header">
+          <h1 id="nama-halaman">Makanan Favorit Saya</h1>
+          <p id="deskripsi-header">Daftar makanan yang paling saya sukai.</p>
+        </div>
+
+        <nav class="navbar" aria-label="Navigasi utama">
+          <ul>
+            <li><a href="#daftar-makanan">Daftar Makanan</a></li>
+            <li><a href="#tambah-makanan">Tambah Makanan</a></li>
+            <li><a href="#tentang-saya">Tentang Saya</a></li>
+          </ul>
+        </nav>
+
+        <div class="pengaturan-tema">
+          <input type="checkbox" id="tema" class="pengalih-tema">
+          <label for="tema" class="tombol-tema">Tema gelap</label>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="isi">
+
+      <!-- SIDEBAR -->
+      <aside class="sisi" aria-labelledby="judul-samping">
+        <div class="panel-samping">
+          <h2 id="judul-samping">Tentang Halaman</h2>
+          <p id="deskripsi-halaman">Halaman makanan favorit saya.</p>
+
+          <div class="info-samping">
+            <span class="label-info">Favorit utama</span>
+            <strong id="favorit-utama" aria-live="polite">-</strong>
+          </div>
+
+          <div class="info-samping">
+            <span class="label-info">Jumlah makanan</span>
+            <strong id="jumlah-makanan" aria-live="polite">-</strong>
+          </div>
+
+          <div class="info-samping">
+            <span class="label-info">Rating tertinggi</span>
+            <strong id="rating-tertinggi" aria-live="polite">-</strong>
+          </div>
+        </div>
+      </aside>
+
+      <!-- KONTEN -->
+      <div class="konten">
+
+        <!-- DAFTAR MAKANAN -->
+        <section id="daftar-makanan" aria-labelledby="judul-daftar">
+          <div class="section-heading">
+            <div>
+              <h2 id="judul-daftar">Daftar Makanan</h2>
+              <p id="deskripsi-daftar">Makanan yang saya sukai.</p>
+            </div>
+          </div>
+
+          <!-- TOMBOL FILTER P9 -->
+          <div id="filter" style="margin-bottom: 1rem; display: flex; gap: 0.5rem;">
+            <button data-kategori="semua" class="aktif">Semua</button>
+            <button data-kategori="Indonesia">Indonesia</button>
+            <button data-kategori="Jepang">Jepang</button>
+          </div>
+
+          <!-- WADAH GALERI MAKANAN -->
+          <div class="galeri" id="galeri-makanan" aria-live="polite"></div>
+          <p id="pesan-kosong" hidden style="margin-top: 1rem; color: #666;">Tidak ada makanan pada kategori ini.</p>
+
+          <!-- GAMBAR -->
+          <figure class="gambar-makanan" style="margin-top: 1.5rem;">
+            <img src="makanan-favorit.jpg" alt="Semangkuk mie ayam bakso" width="500" height="333" loading="lazy">
+            <figcaption id="caption-gambar">Mie ayam bakso, makanan yang paling saya sukai.</figcaption>
+          </figure>
+        </section>
+
+        <!-- TAMBAH MAKANAN -->
+        <section id="tambah-makanan" aria-labelledby="judul-form">
+          <h2 id="judul-form">Tambah Makanan</h2>
+          <p>Masukkan makanan favorit yang ingin ditambahkan ke dalam daftar.</p>
+
+          <form id="form-makanan" aria-labelledby="judul-form">
+            <div class="form-kolom">
+              <label for="nama-makanan">Nama Makanan</label>
+              <input type="text" id="nama-makanan" name="nama-makanan" placeholder="Contoh: Seblak" required>
+              <p class="pesan-galat" id="galat-nama-makanan" style="display:none; color:red; margin-top:0.25rem;">Nama makanan wajib diisi.</p>
+            </div>
+
+            <div class="form-kolom">
+              <label for="asal-makanan">Asal</label>
+              <input type="text" id="asal-makanan" name="asal-makanan" placeholder="Contoh: Indonesia" required>
+              <p class="pesan-galat" id="galat-asal-makanan" style="display:none; color:red; margin-top:0.25rem;">Asal makanan wajib diisi.</p>
+            </div>
+
+            <div class="form-kolom">
+              <label for="rating">Rating</label>
+              <input type="number" id="rating" name="rating" min="1" max="5" step="1" placeholder="1 - 5" required>
+              <p class="pesan-galat" id="galat-rating" style="display:none; color:red; margin-top:0.25rem;">Rating harus diisi antara 1 sampai 5.</p>
+            </div>
+
+            <button type="submit">Tambah Makanan</button>
+          </form>
+        </section>
+
+        <!-- TENTANG SAYA -->
+        <section id="tentang-saya" aria-labelledby="judul-tentang-saya">
+          <h2 id="judul-tentang-saya">Tentang Saya</h2>
+          <p id="tentang-saya-teks">-</p>
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p id="footer-teks">-</p>
+    </footer>
+
+  </div>
+
+  <!-- SCRIPT MODUL P9 -->
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/dom.js"></script>
+
+</body>
+
+</html>

@@ -146,25 +146,48 @@ Contoh penerapan media query pada `responsif.css`:
 }
 ```
 
+## Pertemuan 7 — Catatan Kelanjutan
+
+Tidak ada folder atau berkas sumber P7 tersendiri di repositori ini. Halaman dari P6 menjadi dasar untuk pekerjaan P8; capaian teknis khusus P7 tidak dicatat agar dokumentasi tidak mengarang pekerjaan yang tidak tersedia.
+
+## Pertemuan 8 — JavaScript Modern ES6+
+
+Pada P8, halaman makanan dikembangkan dengan JavaScript modern dan data berbentuk objek dalam array. Implementasi menggunakan `const` dan `let`, fungsi panah, template literal, destructuring, optional chaining, nullish coalescing, serta metode array seperti `map`, `filter`, `find`, dan `sort` dengan spread.
+
+Data profil dan daftar makanan digunakan untuk membentuk kartu serta ringkasan halaman. Form tambah makanan memvalidasi nama, asal, dan rating; filter asal menampilkan makanan Indonesia atau Jepang. Tahap ini menjadi dasar pemisahan kode data, manipulasi DOM, dan interaksi pada pertemuan berikutnya.
+
+## Pertemuan 9 — DOM dan Interaktivitas
+
+Pada P9, data makanan dan fungsi format rating dipisahkan dari pekerjaan DOM. Halaman menampilkan kartu makanan, profil, statistik favorit/rating, dan keadaan daftar kosong. Pengguna dapat memfilter berdasarkan asal dan menambahkan makanan melalui form dengan validasi.
+
+## Pertemuan 10 — JavaScript Asinkron: Fetch, Promise, dan JSON
+
+Pada P10, data makanan dipindahkan ke berkas JSON dan dimuat secara asinkron menggunakan `fetch()` serta Promise. Lapisan API memeriksa respons HTTP, membaca JSON, dan meneruskan kegagalan agar dapat ditangani aplikasi. Struktur modul memisahkan data, API, state, tampilan, event, dan perakitan aplikasi.
+
 ## Pertemuan 11 — Modul, State, dan Penyimpanan Klien
 
-Pekerjaan WS11 berada di folder ini dan memakai lima modul JavaScript dengan tanggung jawab terpisah:
+Pada P11, halaman P9/P10 disusun menjadi lima modul utama:
 
-* `js/data.js`: kategori bawaan, pemformat harga, dan pembentuk data makanan baru.
-* `js/state.js`: satu objek `state`, perubahan kategori/daftar, serta penyimpanan preferensi.
-* `js/dom.js`: menyaring dan menggambar ulang halaman berdasarkan `state`.
-* `js/events.js`: memasang pendengar filter, reset, dan form.
-* `js/app.js`: merakit modul dan memuat data.
-* `js/api.js`: lapisan pengambil data dari P10; dipertahankan tanpa perubahan.
+* `js/data.js`: konstanta kategori, pemformat rating, dan pembentuk makanan dari form.
+* `js/state.js`: objek state tunggal, mutasi kategori/daftar, serta baca/simpan preferensi.
+* `js/dom.js`: penyaringan dan render tampilan dari state.
+* `js/events.js`: pemasangan event filter, reset, tema, dan form.
+* `js/app.js`: perakit modul dan pemuatan data.
+* `js/api.js`: lapisan fetch P10, tetap dipisahkan dari lima modul utama.
 
-Impor menggunakan jalur relatif `./` dengan akhiran `.js`. Preferensi kategori disimpan sebagai JSON di `localStorage` dengan kunci `pabw-p11` dan versi skema. Simpanan JSON yang rusak atau versi yang berbeda dihapus; halaman kembali ke kategori `Semua`. Tombol **Atur Ulang** juga menghapus preferensi tersimpan.
+Kategori filter disimpan dalam JSON di `localStorage` dengan versi skema. JSON yang rusak atau versi yang tidak sesuai dibuang dan halaman kembali ke nilai bawaan. Tombol **Atur Ulang** menghapus preferensi tersimpan. Tema dan daftar makanan tidak disimpan.
 
-Daftar makanan tetap mengikuti pilihan sebelumnya: Mie Ayam Bakso, Nasi Goreng, dan Udon. Foto lokal `makanan-favorit.jpg`, `nasi goreng.jpg`, dan `udon.jpg` digunakan pada kartu makanan yang sesuai.
+Halaman mempertahankan pilihan makanan **Mie Ayam Bakso, Nasi Goreng, dan Udon** beserta foto lokal `makanan-favorit.jpg`, `nasi goreng.jpg`, dan `udon.jpg`. Header menempatkan judul di kiri dan navigasi serta tombol tema di kanan. Panel **Tips Makanan** terpisah dari **Tentang Halaman**, sementara **Tentang Saya** berada di bagian paling bawah dengan teks rata tengah. Font antarmuka menggunakan **Poppins**.
 
-Yang disimpan hanya kategori filter. Data makanan dari berkas JSON, makanan yang ditambahkan melalui form, tema, dan isi form tidak disimpan oleh WS11; token, kata sandi, dan data pribadi juga tidak pernah disimpan. Karena itu makanan yang ditambahkan melalui form dan pilihan tema hanya tersedia selama halaman masih terbuka.
-
-Jalankan halaman melalui server lokal agar `fetch()` dan modul ES dapat dimuat. Versi yang tersedia saat pengerjaan: Node.js `v22.23.2` dan npm `10.9.8`.
+Jalankan halaman melalui server lokal agar modul ES dan `fetch()` dapat dimuat. Versi yang tersedia saat pengerjaan: Node.js `v22.23.2` dan npm `10.9.8`.
 
 ### Catatan penggunaan AI
 
-AI membantu merapikan pemisahan modul, state, penyimpanan preferensi, dan penyambungan halaman/CSS untuk WS11. Topik makanan favorit, isi data, dan pilihan gambar merupakan pekerjaan penulis sendiri.
+AI membantu merapikan pemisahan modul, state, penyimpanan preferensi, dokumentasi, dan penyambungan tampilan WS11. Topik makanan favorit, data makanan, dan pilihan gambar merupakan pekerjaan penulis sendiri.
+
+### Checklist dan verifikasi P11
+
+* Lima modul utama dan jalur impor relatif diperiksa.
+* Data JSON, foto makanan, dan halaman diuji melalui server lokal.
+* Filter kategori, simpan/pulih preferensi, reset, pemulihan JSON rusak/versi lama, dan tombol tema diuji di browser.
+* Layout responsif serta posisi panel Tips dan Tentang Saya diperiksa.

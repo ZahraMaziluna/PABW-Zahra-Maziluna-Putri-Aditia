@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Makanan Nusantara - P11 Modular</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
 </head>
 <body>
+  <header class="header">
+    <h1>Katalog Makanan Nusantara</h1>
+    <p>Eksplorasi Kuliner Khas Daerah</p>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <div class="filter-bar">
+      <input type="text" id="search-input" placeholder="Cari nama makanan...">
+      <select id="category-select">
+        <option value="semua">Semua Kategori</option>
+        <option value="Makanan Berat">Makanan Berat</option>
+        <option value="Camilan">Camilan</option>
+        <option value="Minuman">Minuman</option>
+      </select>
+    </div>
+  </header>
 
+  <main class="container">
+    <div id="loading-state" class="status-msg">Memuat data...</div>
+    <div id="makanan-list" class="grid-container"></div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Modul Praktikum Web P11. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal Detail (Fitur P8/P10) -->
+  <div id="modal-detail" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-modal" class="btn-close">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>

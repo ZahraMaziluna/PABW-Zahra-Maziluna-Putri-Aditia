@@ -1,0 +1,210 @@
+/* =========================
+   KERANGKA HALAMAN P5
+   ========================= */
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  padding-inline: var(--space-4);
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+  padding-block: var(--space-4);
+}
+
+.header-baris {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.judul-header {
+  min-width: 0;
+}
+
+.judul-header p {
+  font-size: var(--text-sm);
+}
+
+
+/* =========================
+   NAVBAR — FLEXBOX
+   ========================= */
+
+.navbar {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   TEMA
+   ========================= */
+
+.pengaturan-tema {
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================
+   ISI — GRID 2 KOLOM
+   ========================= */
+
+.isi {
+  display: grid;
+  grid-template-columns: 16rem minmax(0, 1fr);
+  gap: var(--space-6);
+  min-width: 0;
+  padding-block: var(--space-6);
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sisi {
+  min-width: 0;
+}
+
+.panel-samping {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  padding: var(--card-pad);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.panel-samping h2 {
+  font-size: var(--text-xl);
+}
+
+.info-samping {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.label-info {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+}
+
+
+/* =========================
+   KONTEN
+   ========================= */
+
+.konten {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+
+/* =========================
+   GALERI P5 — GRID ADAPTIF
+   ========================= */
+
+.galeri {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 52rem) {
+  .isi {
+    grid-template-columns: 1fr;
+  }
+
+  .sisi {
+    order: -1;
+  }
+}
+
+@media (max-width: 40rem) {
+  .page {
+    padding-inline: var(--space-3);
+  }
+
+  .header-baris {
+    align-items: flex-start;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar ul {
+    width: 100%;
+    gap: var(--space-2) var(--space-4);
+  }
+}

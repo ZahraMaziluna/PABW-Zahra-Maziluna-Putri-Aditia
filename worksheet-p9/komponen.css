@@ -1,0 +1,290 @@
+/* =========================
+   KARTU
+   ========================= */
+
+.kartu {
+  min-width: 0;
+  min-height: 14rem;
+
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+
+  padding: var(--card-pad);
+}
+
+.kartu__isi {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.kartu__judul {
+  overflow-wrap: anywhere;
+}
+
+.kartu__kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+
+  margin-top: auto;
+  padding-top: var(--space-3);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.kartu__kaki span {
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.kartu__detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.kartu__detail span {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+.badge {
+  width: fit-content;
+
+  padding: var(--space-1) var(--space-2);
+
+  border-radius: var(--radius-full);
+
+  background: var(--color-primary);
+  color: var(--color-surface);
+
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+
+/* =========================
+   SPAN P5
+   ========================= */
+
+.sorotan {
+  grid-column: span 2;
+}
+
+/* =========================
+   GAMBAR MAKANAN
+   ========================= */
+
+.gambar-makanan {
+  width: fit-content;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  margin: 0;
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  padding: var(--card-pad);
+  box-shadow: var(--shadow-1);
+}
+
+.gambar-makanan img {
+  display: block;
+
+  width: 20rem;
+  max-width: 100%;
+  height: 14rem;
+
+  object-fit: cover;
+
+  border-radius: var(--radius-md);
+}
+
+.gambar-makanan figcaption {
+  font-size: var(--text-sm);
+}
+
+/* =========================
+   FORM
+   ========================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+
+  max-width: 40rem;
+}
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+
+  font: inherit;
+
+  padding: var(--space-2) var(--space-3);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+button {
+  width: fit-content;
+
+  font: inherit;
+
+  padding: var(--space-2) var(--space-4);
+
+  border: 0;
+  border-radius: var(--radius-md);
+
+  background: var(--color-primary);
+  color: var(--color-surface);
+
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+/* =========================
+   FOCUS
+   ========================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+
+/* =========================
+   VALIDASI FORM
+   ========================= */
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: var(--color-danger);
+}
+
+.pesan-galat {
+  display: none;
+
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+
+.form-kolom:has(input:user-invalid) .pesan-galat,
+.form-kolom:has(select:user-invalid) .pesan-galat,
+.form-kolom:has(textarea:user-invalid) .pesan-galat {
+  display: block;
+}
+
+
+/* =========================
+   RESPONSIVE SPAN
+   ========================= */
+
+@media (max-width: 40rem) {
+}
+
+/* Styling Penanda Tombol Aktif (Lembar C) */
+#filter button.aktif {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  font-weight: bold;
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+/* Styling Daftar Proyek & Kartu */
+#daftar {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.kartu {
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.kategori-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  color: #475569;
+}
+
+/* Styling Pesan Error Validasi Form (Lembar D) */
+.field-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pesan-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  min-height: 1.2rem;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 1px solid #dc2626;
+  background-color: #fef2f2;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

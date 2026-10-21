@@ -1,0 +1,26 @@
+[
+  {
+    "nama": "Mie Ayam Bakso",
+    "asal": "Indonesia",
+    "jenis": "Makanan utama",
+    "rating": 5,
+    "favorit": true,
+    "deskripsi": "Mie ayam dengan tambahan bakso khas favorit Zahra."
+  },
+  {
+    "nama": "Nasi Goreng",
+    "asal": "Indonesia",
+    "jenis": "Makanan utama",
+    "rating": 4,
+    "favorit": false,
+    "deskripsi": "Nasi goreng spesial rica pedas manis."
+  },
+  {
+    "nama": "Udon",
+    "asal": "Jepang",
+    "jenis": "Makanan utama",
+    "rating": 4,
+    "favorit": false,
+    "deskripsi": "Udon Jepang dengan kuah gurih dan tekstur kenyal."
+  }
+]
