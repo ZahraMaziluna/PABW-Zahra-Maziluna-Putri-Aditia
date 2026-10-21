@@ -146,48 +146,101 @@ Contoh penerapan media query pada `responsif.css`:
 }
 ```
 
-## Pertemuan 7 — Catatan Kelanjutan
+## Pertemuan 7 — Ujian CPMK
 
-Tidak ada folder atau berkas sumber P7 tersendiri di repositori ini. Halaman dari P6 menjadi dasar untuk pekerjaan P8; capaian teknis khusus P7 tidak dicatat agar dokumentasi tidak mengarang pekerjaan yang tidak tersedia.
+Pertemuan 7 digunakan untuk **Ujian CPMK**, bukan worksheet. Oleh karena itu, tidak ada berkas atau hasil worksheet P7 yang perlu dicantumkan di repositori ini.
+
+**Berkas yang digunakan:** Tidak ada berkas worksheet P7.
+
+**Penerapan:**
+
+* Pertemuan ini merupakan ujian CPMK, bukan pengerjaan worksheet.
+* Pengerjaan worksheet yang tersedia berlanjut pada Pertemuan 8.
 
 ## Pertemuan 8 — JavaScript Modern ES6+
 
-Pada P8, halaman makanan dikembangkan dengan JavaScript modern dan data berbentuk objek dalam array. Implementasi menggunakan `const` dan `let`, fungsi panah, template literal, destructuring, optional chaining, nullish coalescing, serta metode array seperti `map`, `filter`, `find`, dan `sort` dengan spread.
+Pada Pertemuan 8, halaman Makanan Favorit Saya dikembangkan menggunakan JavaScript modern ES6+ dan struktur data objek dalam array.
 
-Data profil dan daftar makanan digunakan untuk membentuk kartu serta ringkasan halaman. Form tambah makanan memvalidasi nama, asal, dan rating; filter asal menampilkan makanan Indonesia atau Jepang. Tahap ini menjadi dasar pemisahan kode data, manipulasi DOM, dan interaksi pada pertemuan berikutnya.
+**Berkas yang digunakan:**
+
+* `profil.html`
+* `js/app.js`
+* `tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`, dan `responsif.css`
+
+**Penerapan:**
+
+* Mengelola data profil, daftar makanan, dan daftar proyek menggunakan `const`, `let`, objek, serta array.
+* Menggunakan fungsi panah, template literal, destructuring, optional chaining, dan nullish coalescing.
+* Mengolah dan menampilkan data menggunakan metode array seperti `map()`, `filter()`, `find()`, dan `sort()`.
+* Menyediakan filter makanan berdasarkan asal, ringkasan data, dan validasi form tambah makanan.
+* Mempertahankan pilihan makanan Mie Ayam Bakso, Nasi Goreng, dan Udon.
+
+Pertemuan ini menjadi dasar untuk memisahkan data, pengelolaan DOM, dan event pada pertemuan selanjutnya.
 
 ## Pertemuan 9 — DOM dan Interaktivitas
 
-Pada P9, data makanan dan fungsi format rating dipisahkan dari pekerjaan DOM. Halaman menampilkan kartu makanan, profil, statistik favorit/rating, dan keadaan daftar kosong. Pengguna dapat memfilter berdasarkan asal dan menambahkan makanan melalui form dengan validasi.
+Pada Pertemuan 9, data makanan dan fungsi format rating dipisahkan dari kode yang mengelola DOM. Halaman menampilkan kartu makanan, informasi profil, statistik, serta pesan ketika hasil filter kosong.
+
+**Berkas yang digunakan:**
+
+* `profil.html`
+* `js/app.js` untuk data profil, daftar makanan, dan fungsi format rating.
+* `js/dom.js` untuk manipulasi DOM, render kartu, filter, dan form.
+* Berkas CSS halaman yang digunakan pada pertemuan sebelumnya.
+
+**Penerapan:**
+
+* Membuat elemen kartu makanan dari data menggunakan JavaScript.
+* Memperbarui informasi profil dan statistik favorit/rating pada halaman.
+* Memfilter makanan berdasarkan asal dengan event delegation.
+* Menambahkan makanan melalui form serta memvalidasi nama, asal, dan rating.
+* Menampilkan keadaan kosong jika filter tidak menghasilkan makanan.
 
 ## Pertemuan 10 — JavaScript Asinkron: Fetch, Promise, dan JSON
 
-Pada P10, data makanan dipindahkan ke berkas JSON dan dimuat secara asinkron menggunakan `fetch()` serta Promise. Lapisan API memeriksa respons HTTP, membaca JSON, dan meneruskan kegagalan agar dapat ditangani aplikasi. Struktur modul memisahkan data, API, state, tampilan, event, dan perakitan aplikasi.
+Pada Pertemuan 10, data makanan dipindahkan ke berkas JSON dan dimuat secara asinkron menggunakan `fetch()` serta `async`/`await`.
+
+**Berkas yang digunakan:**
+
+* `profil.html` dan `makanan.json`
+* `js/api.js` untuk mengambil serta membaca data JSON.
+* `js/data.js`, `js/state.js`, `js/dom.js`, `js/events.js`, dan `js/app.js` untuk memisahkan data, state, tampilan, event, dan inisialisasi aplikasi.
+
+**Penerapan:**
+
+* Mengambil data dari `makanan.json` menggunakan `fetch()`.
+* Memeriksa status respons HTTP sebelum membaca JSON.
+* Menangani kegagalan pengambilan data dengan mencatat error dan mengembalikan daftar kosong.
+* Memisahkan tanggung jawab kode ke dalam modul ES dengan `import` dan `export`.
+* Menjalankan halaman melalui server lokal agar `fetch()` dan modul ES dapat dimuat.
 
 ## Pertemuan 11 — Modul, State, dan Penyimpanan Klien
 
-Pada P11, halaman P9/P10 disusun menjadi lima modul utama:
+Pada Pertemuan 11, halaman P10 disusun kembali dengan state terpusat dan pemisahan modul. `api.js` tetap digunakan untuk pemuatan data dari P10.
 
-* `js/data.js`: konstanta kategori, pemformat rating, dan pembentuk makanan dari form.
-* `js/state.js`: objek state tunggal, mutasi kategori/daftar, serta baca/simpan preferensi.
-* `js/dom.js`: penyaringan dan render tampilan dari state.
-* `js/events.js`: pemasangan event filter, reset, tema, dan form.
-* `js/app.js`: perakit modul dan pemuatan data.
-* `js/api.js`: lapisan fetch P10, tetap dipisahkan dari lima modul utama.
+**Berkas yang digunakan:**
 
-Kategori filter disimpan dalam JSON di `localStorage` dengan versi skema. JSON yang rusak atau versi yang tidak sesuai dibuang dan halaman kembali ke nilai bawaan. Tombol **Atur Ulang** menghapus preferensi tersimpan. Tema dan daftar makanan tidak disimpan.
+* `profil.html`, `data/makanan.json`, dan berkas gambar makanan.
+* `js/data.js` untuk kategori, pemformat rating, dan pembentukan data makanan dari form.
+* `js/state.js` untuk state aplikasi dan pengelolaan preferensi kategori.
+* `js/dom.js` untuk filter serta render antarmuka dari state.
+* `js/events.js` untuk event filter, reset, tema, dan form.
+* `js/app.js` sebagai entry point aplikasi.
+* `js/api.js` untuk mengambil data JSON.
+* `tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`, dan `responsif.css`.
 
-Halaman mempertahankan pilihan makanan **Mie Ayam Bakso, Nasi Goreng, dan Udon** beserta foto lokal `makanan-favorit.jpg`, `nasi goreng.jpg`, dan `udon.jpg`. Header menempatkan judul di kiri dan navigasi serta tombol tema di kanan. Panel **Tips Makanan** terpisah dari **Tentang Halaman**, sementara **Tentang Saya** berada di bagian paling bawah dengan teks rata tengah. Font antarmuka menggunakan **Poppins**.
+**Penerapan:**
 
-Jalankan halaman melalui server lokal agar modul ES dan `fetch()` dapat dimuat. Versi yang tersedia saat pengerjaan: Node.js `v22.23.2` dan npm `10.9.8`.
+* Menyimpan kategori filter aktif dalam satu objek state dan memperbarui tampilan berdasarkan state tersebut.
+* Menyimpan preferensi kategori sebagai JSON di `localStorage`, dilengkapi versi skema.
+* Menghapus simpanan yang rusak atau tidak sesuai versi dan menggunakan kategori bawaan.
+* Menyediakan tombol **Atur Ulang** untuk menghapus preferensi kategori. Tema dan daftar makanan tidak disimpan.
+* Mempertahankan pilihan makanan **Mie Ayam Bakso, Nasi Goreng, dan Udon** beserta foto lokal `makanan-favorit.jpg`, `nasi goreng.jpg`, dan `udon.jpg`.
+* Menempatkan judul di kiri dan navigasi serta tombol tema di kanan. Panel **Tips Makanan** terpisah dari **Tentang Halaman**, sedangkan **Tentang Saya** berada di bagian bawah halaman dengan teks rata tengah.
+* Menggunakan font **Poppins** pada antarmuka.
 
-### Catatan penggunaan AI
+Jalankan halaman melalui server lokal agar modul ES dan `fetch()` dapat dimuat.
 
-AI membantu merapikan pemisahan modul, state, penyimpanan preferensi, dokumentasi, dan penyambungan tampilan WS11. Topik makanan favorit, data makanan, dan pilihan gambar merupakan pekerjaan penulis sendiri.
+**Catatan penggunaan AI:** AI membantu merapikan pemisahan modul, state, penyimpanan preferensi, dokumentasi, dan penyambungan tampilan WS11. Topik makanan favorit, data makanan, dan pilihan gambar merupakan pekerjaan penulis sendiri.
 
-### Checklist dan verifikasi P11
-
-* Lima modul utama dan jalur impor relatif diperiksa.
-* Data JSON, foto makanan, dan halaman diuji melalui server lokal.
-* Filter kategori, simpan/pulih preferensi, reset, pemulihan JSON rusak/versi lama, dan tombol tema diuji di browser.
-* Layout responsif serta posisi panel Tips dan Tentang Saya diperiksa.
+**Pemeriksaan:** Modul dan jalur impor, data JSON, foto, filter kategori, penyimpanan/pemulihan preferensi, reset, tema, serta layout responsif diperiksa melalui server lokal dan browser.
