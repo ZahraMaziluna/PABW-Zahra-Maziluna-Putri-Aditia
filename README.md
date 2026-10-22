@@ -3,7 +3,7 @@
 Repo ini memuat pekerjaan mata kuliah Pengembangan Aplikasi Berbasis Web, satu folder untuk setiap pertemuan.
 
 ## Pertemuan 3 — Halaman Profil Saya
-
+          
 Topik halaman saya: Makanan Favorit Saya.
 
 - Judul halaman: Makanan Favorit Saya
@@ -253,7 +253,7 @@ Pada Pertemuan 12, halaman Makanan Favorit Saya dipindahkan dari JavaScript modu
 
 * `worksheet-p12/index.html`, `package.json`, dan `package-lock.json`.
 * `worksheet-p12/src/App.vue` sebagai komponen utama halaman.
-* `worksheet-p12/src/components/` untuk `KepalaProfil.vue`, `TombolFilter.vue`, `DaftarProyek.vue`, dan `FormKontak.vue`.
+* `worksheet-p12/src/components/` untuk `KepalaProfil.vue`, `TombolFilter.vue`, `DaftarProyek.vue`, dan `FormKontak.vue
 * `worksheet-p12/src/state.js` untuk state reaktif dan `worksheet-p12/src/simpanan.js` untuk preferensi kategori di `localStorage`.
 * `worksheet-p12/src/api.js` untuk mengambil data; JSON dan gambar disajikan dari `worksheet-p12/public/`.
 * Enam stylesheet di `worksheet-p12/src/`, diimpor berurutan melalui `src/main.js`.
