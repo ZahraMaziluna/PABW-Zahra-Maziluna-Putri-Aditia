@@ -244,3 +244,30 @@ Jalankan halaman melalui server lokal agar modul ES dan `fetch()` dapat dimuat.
 **Catatan penggunaan AI:** AI membantu merapikan pemisahan modul, state, penyimpanan preferensi, dokumentasi, dan penyambungan tampilan WS11. Topik makanan favorit, data makanan, dan pilihan gambar merupakan pekerjaan penulis sendiri.
 
 **Pemeriksaan:** Modul dan jalur impor, data JSON, foto, filter kategori, penyimpanan/pemulihan preferensi, reset, tema, serta layout responsif diperiksa melalui server lokal dan browser.
+
+## Pertemuan 12 — Build Tooling, npm, dan Framework SPA
+
+Pada Pertemuan 12, halaman Makanan Favorit Saya dipindahkan dari JavaScript modular ke Vue 3 dan Vite. Fitur utama serta tampilan dari P11 tetap dipertahankan.
+
+**Berkas yang digunakan:**
+
+* `worksheet-p12/index.html`, `package.json`, dan `package-lock.json`.
+* `worksheet-p12/src/App.vue` sebagai komponen utama halaman.
+* `worksheet-p12/src/components/` untuk `KepalaProfil.vue`, `TombolFilter.vue`, `DaftarProyek.vue`, dan `FormKontak.vue`.
+* `worksheet-p12/src/state.js` untuk state reaktif dan `worksheet-p12/src/simpanan.js` untuk preferensi kategori di `localStorage`.
+* `worksheet-p12/src/api.js` untuk mengambil data; JSON dan gambar disajikan dari `worksheet-p12/public/`.
+* Enam stylesheet di `worksheet-p12/src/`, diimpor berurutan melalui `src/main.js`.
+
+**Penerapan:**
+
+* Menyusun halaman menjadi komponen Vue dan mengirim data profil melalui props.
+* Menggunakan state reaktif untuk filter, daftar makanan, ringkasan, dan formulir tambah makanan.
+* Memuat serta menyimpan preferensi kategori di `localStorage`.
+* Mempertahankan tema, gambar, data makanan, dan layout responsif dari P11.
+* Menggunakan Vite untuk server pengembangan, build produksi, dan preview hasil build.
+
+Jalankan proyek dari folder `worksheet-p12/` dengan `npm install`, lalu `npm run dev`. Gunakan `npm run build` untuk menghasilkan `dist/` dan `npm run preview` untuk memeriksa hasil build. Panduan proyek dan catatan pemeriksaan tersedia di [`worksheet-p12/README.md`](./worksheet-p12/README.md).
+
+**Catatan penggunaan AI:** AI membantu proses pemindahan ke komponen Vue, penyambungan state dan penyimpanan preferensi, serta dokumentasi. Topik, data makanan, stylesheet, dan fungsi API berasal dari pekerjaan penulis pada pertemuan sebelumnya.
+
+**Pemeriksaan:** Build Vite berhasil dan halaman preview menampilkan data serta gambar. Periksa kembali dengan Node.js LTS yang disyaratkan worksheet sebelum penyerahan.

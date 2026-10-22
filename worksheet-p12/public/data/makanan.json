@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nama": "Mie Ayam Bakso",
+    "asal": "Indonesia",
+    "jenis": "Makanan utama",
+    "rating": 5,
+    "favorit": true,
+    "deskripsi": "Mie ayam dengan tambahan bakso yang menjadi makanan favorit saya.",
+    "gambar": "makanan-favorit.jpg"
+  },
+  {
+    "id": 2,
+    "nama": "Nasi Goreng",
+    "asal": "Indonesia",
+    "jenis": "Makanan utama",
+    "rating": 4,
+    "favorit": false,
+    "deskripsi": "Nasi goreng merupakan makanan sederhana yang tetap menjadi salah satu makanan favorit saya.",
+    "gambar": "nasi goreng.jpg"
+  },
+  {
+    "id": 3,
+    "nama": "Udon",
+    "asal": "Jepang",
+    "jenis": "Makanan utama",
+    "rating": 4,
+    "favorit": false,
+    "deskripsi": "Udon adalah mie khas Jepang dengan tekstur tebal dan kenyal.",
+    "gambar": "udon.jpg"
+  }
+]
